@@ -3,7 +3,7 @@ This app was made with NodeJS & PostgresSQL
 
 ### Clone & Run
 
-Just run an npm install
+Run an npm install
 
 ### Create a PostgresSQL database
 
