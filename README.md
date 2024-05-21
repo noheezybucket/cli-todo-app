@@ -7,14 +7,12 @@ Run an npm install
 
 ### Create a PostgresSQL database
 
-You need a PostgresSQL database
- Colonne |         Type          | Collationnement | NULL-able |            Par dÚfaut
----------+-----------------------+-----------------+-----------+----------------------------------
- id      | bigint                |                 | not null  | nextval('todo_id_seq'::regclass)
- content | character varying(50) |                 | not null  |
- done    | boolean               |                 | not null  | false
-Index :
-    "todo_pkey" PRIMARY KEY, btree (id)
+You need a PostgresSQL database named todo_app with a table name todo
+
+CREATE TABLE todo (
+id BIGSERIAL NOT NULL PRIMARY KEY,
+content VARCHAR(50) NOT NULL,
+done BOOLEAN NOT NULL);
 
 ### Use the app in your CLI
 Place yourself in the directory containing the app.js and run the following commands by typing in your terminal : node app [command]
